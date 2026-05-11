@@ -3,6 +3,17 @@ const {
   GatewayIntentBits
 } = require("discord.js");
 
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot is running");
+});
+
+app.listen(3000, () => {
+  console.log("Web server started");
+});
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -29,7 +40,7 @@ client.on("messageCreate", async (message) => {
 
     await channel.setName(message.content);
 
-    message.reply("変更した！");
+    message.reply("変更したっ！");
   }
 });
 
