@@ -49,7 +49,7 @@ client.on("messageCreate", async (message) => {
 
       // テキストチャンネルID
       const textChannelId =
-        "1380946601077379183";
+        "1380946557511270421";
 
       const vcChannel =
         await client.channels.fetch(vcChannelId);
