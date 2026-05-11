@@ -22,7 +22,7 @@ client.on("messageCreate", async (message) => {
   if (/^\d{5}$/.test(message.content)) {
 
     const targetChannelId =
-      "ここにチャンネルID";
+      "1380947003407728780";
 
     const channel =
       await client.channels.fetch(targetChannelId);
