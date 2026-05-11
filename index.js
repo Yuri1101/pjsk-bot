@@ -81,4 +81,11 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
+  .then(() => {
+    console.log("ログイン成功");
+  })
+  .catch((err) => {
+    console.error("ログイン失敗");
+    console.error(err);
+  });
